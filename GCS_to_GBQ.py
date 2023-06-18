@@ -20,8 +20,11 @@ with DAG(
         source_format='CSV',
         destination_project_dataset_table='friendly-plane-294914.Airflow_Test.apple_share_price', # GBQ table name
         schema_fields=[
-            {'name': 'name', 'type': 'STRING', 'mode': 'NULLABLE'},
-            {'name': 'post_abbr', 'type': 'STRING', 'mode': 'NULLABLE'},
+            {'name': 'Date', 'type': 'DATE', 'mode': 'NULLABLE'},
+            {'name': 'Open', 'type': 'FLOAT64', 'mode': 'NULLABLE'},
+            {'name': 'High', 'type': 'FLOAT64', 'mode': 'NULLABLE'},
+            {'name': 'Low', 'type': 'FLOAT64', 'mode': 'NULLABLE'},
+            {'name': 'Close', 'type': 'FLOAT64', 'mode': 'NULLABLE'},
         ],
         write_disposition='WRITE_TRUNCATE',
         skip_leading_rows=1,
