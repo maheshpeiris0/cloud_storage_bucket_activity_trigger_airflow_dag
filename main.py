@@ -44,6 +44,6 @@ def trigger_dag_gcf(data, context=None):
         "https://example-airflow-ui-url-dot-us-central1.composer.googleusercontent.com"
     )
     # Replace with the ID of the DAG that you want to run.
-    dag_id = 'composer_sample_trigger_response_dag'
+    dag_id = 'GCP_to_GBQ'
 
     composer2_airflow_rest_api.trigger_dag(web_server_url, dag_id, data)
