@@ -15,10 +15,10 @@ with DAG(
 ) as dag:
     gcs_to_bq = GCSToBigQueryOperator(
         task_id='gcs_to_bq',
-        bucket='cloud_functions_mp', # GCS bucket name
+        bucket='bucket_name', # GCS bucket name
         source_objects=['apple_share_prices.csv'], 
         source_format='CSV',
-        destination_project_dataset_table='friendly-plane-294914.Airflow_Test.apple_share_price', # GBQ table name
+        destination_project_dataset_table='project_name.dataset.apple_share_price', # GBQ table name
         schema_fields=[
             {'name': 'Date', 'type': 'DATE', 'mode': 'NULLABLE'},
             {'name': 'Open', 'type': 'FLOAT64', 'mode': 'NULLABLE'},
