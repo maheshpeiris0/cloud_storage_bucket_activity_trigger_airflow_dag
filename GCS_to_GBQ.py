@@ -8,10 +8,10 @@ default_args = {
 }
 
 with DAG(
-    'gcp_to_gbq',
+    'GCS_to_GBQ',
     default_args=default_args,
     schedule_interval=None,
-    tags=['GCP_to_GBQ'],
+    tags=['GCS_to_GBQ'],
 ) as dag:
     gcs_to_bq = GCSToBigQueryOperator(
         task_id='gcs_to_bq',
